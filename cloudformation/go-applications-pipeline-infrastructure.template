@@ -171,6 +171,7 @@ Resources:
         Type: AWS::AutoScaling::LaunchConfiguration
         Properties:
             KeyName: bmiller-AWS
+            AssociatePublicIpAddress: true
             ImageId:  !FindInMap [AWSRegionToAMI, !Ref "AWS::Region", AMI]
             InstanceType: !Ref InstanceType
             IamInstanceProfile: !Ref InstanceProfile
